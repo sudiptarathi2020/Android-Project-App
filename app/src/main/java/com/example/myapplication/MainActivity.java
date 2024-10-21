@@ -35,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
         else{
-            textView.setText(firebaseUser.getEmail());
+            Intent intent = new Intent(MainActivity.this,NavigationHost.class);
+            startActivity(intent);
+            finish();
         }
         button.setOnClickListener(view -> {
             FirebaseAuth.getInstance().signOut();
